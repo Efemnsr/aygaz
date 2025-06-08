@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manuroğlu Kardeşler Tüp Bayi</title>
+  <style>
+    /* Arka plan animasyon */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #003366;
+      background: url('https://www.transparenttextures.com/patterns/graphy.png'), linear-gradient(45deg, #0070c0, #3399ff, #005bb5, #66ccff);
+      background-size: 300% 300%, 400% 400%;
+      animation: bgScroll 60s linear infinite;
+    }
+
+    @keyframes bgScroll {
+      0% { background-position: 0% 0%, 0% 50%; }
+      100% { background-position: 100% 100%, 100% 50%; }
+    }
+
+    header {
+      background: #0070c0;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-top: 0.3rem;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section {
+      background: white;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .rotating-tube {
+      width: 100px;
+      height: 100px;
+      margin: 2rem auto;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Gas_cylinder_icon.png') no-repeat center;
+      background-size: contain;
+      animation: rotate 4s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .category {
+      margin-top: 2rem;
+    }
+
+    .category h2 {
+      font-size: 1.6rem;
+      color: #00509e;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .item {
+      background: #f0f7ff;
+      padding: 1rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .item:hover {
+      background: #d0eaff;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #0070c0;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Manuroğlu Kardeşler Tüp Bayi</h1>
+    <div class="tagline">+30 Yıllık Tecrübe ile Hizmetinizdeyiz | 📞 0326 231 43 31</div>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>Hakkımızda</h2>
+      <p>
+        Firmamız <strong>Harbiye Mahallesi İzmir-Hatay Kardeşlik Çarşısı No:105</strong> adresinde yer almakta olup,
+        30 yılı aşkın süredir güvenilir Aygaz bayisi olarak hizmet vermektedir. Kaliteli ürünlerimiz ve hızlı teslimat anlayışımızla her zaman yanınızdayız.
+      </p>
+      <div class="rotating-tube"></div>
+    </div>
+
+    <div class="section category">
+      <h2>🛢️ Tüpler</h2>
+      <div class="grid">
+        <div class="item">Gri Ev Tüpü 12 kg</div>
+        <div class="item">Gri Piknik Tüpü 2 kg</div>
+        <div class="item">Ticari Tüp 24 kg</div>
+        <div class="item">Vanalı 12 kg Tüp</div>
+      </div>
+    </div>
+
+    <div class="section category">
+      <h2>🔧 Tüp Malzemeleri</h2>
+      <div class="grid">
+        <div class="item">Piknik Tüp Brülörleri</div>
+        <div class="item">Piknik Tüp Izgaraları</div>
+        <div class="item">Piknik Tüp Muslukları</div>
+        <div class="item">Piknik Tüp Sobaları</div>
+        <div class="item">Piknik Tüp Contası</div>
+        <div class="item">Piknik Tüp Ocak Seti</div>
+        <div class="item">Tüpgaz Hortumları</div>
+        <div class="item">Ev Tipi Dedantörler</div>
+        <div class="item">Sanayi Dedantörleri</div>
+        <div class="item">LPG / Doğalgaz Isıtıcılar</div>
+        <div class="item">Tüplü Ocaklar</div>
+        <div class="item">Tüplü Aşırı Volkan Ocak</div>
+      </div>
+    </div>
+
+    <div class="section category">
+      <h2>💧 Su Ürünleri</h2>
+      <div class="grid">
+        <div class="item">Bardak Su </div>
+        <div class="item">0,5L Şişe Su (Koli) </div>
+        <div class="item">1,5L Şişe Su (Koli)</div>
+        <div class="item">5L Şişe Su (Koli)</div>
+        <div class="item">19L Damacana Su</div>
+        <div class="item">Damacana Pompası</div>
+        <div class="item">Şarjlı Damacana Pompası</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div><strong>Telefon:</strong> 0326 231 43 31</div>
+    <div><strong>Adres:</strong> Harbiye Mahallesi İzmir-Hatay Kardeşlik Çarşısı No:105</div>
+    <div style="margin-top:1rem;">© 2025 Manuroğlu Kardeşler Tüp Bayi</div>
+  </footer>
+
+</body>
+</html>
