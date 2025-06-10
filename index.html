@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Manuroğlu Kardeşler Tüp Bayi</title>
   <style>
-    /* Arka plan animasyon */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -115,6 +114,23 @@
       color: white;
       margin-top: 3rem;
     }
+
+    /* Canlı Saat Stili */
+    #clock {
+      position: fixed;
+      top: 10px;
+      right: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 6px 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      color: #003366;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      z-index: 2000;
+      user-select: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -130,9 +146,23 @@
       <h2>Hakkımızda</h2>
       <p>
         Firmamız <strong>Harbiye Mahallesi İzmir-Hatay Kardeşlik Çarşısı No:105</strong> adresinde yer almakta olup,
-        30 yılı aşkın süredir güvenilir Aygaz bayisi olarak hizmet vermektedir. Kaliteli ürünlerimiz ve hızlı teslimat anlayışımızla her zaman yanınızdayız.
+        30 yılı aşkın süredir güvenilir Aygaz bayisi olarak hizmet vermektedir. Kaliteli ürünlerimiz ve hızlı teslimat anlayışımızla her zaman yanınızdayız. 
+        Bize ulaşmak için <strong>📞 0326 231 43 31</strong> numaralı telefonu arayabilirsiniz.
       </p>
+
       <div class="rotating-tube"></div>
+    </div>
+
+    <!-- Harita Bölümü -->
+    <div class="section">
+      <h2>📍 Konumumuz</h2>
+      <p>Bizi kolayca bulabilmeniz için haritadan konumumuzu inceleyebilirsiniz:</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d832.889705448287!2d36.182760261446306!3d36.15917404444892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1525b480fc5f0071%3A0x22a847b729cf3cce!2sManuro%C4%9Flu%20Karde%C5%9Fler%20T%C3%BCp%20Bayii!5e0!3m2!1str!2str!4v1718000000000!5m2!1str!2str" 
+        width="100%" height="350" style="border:0; border-radius:12px;" 
+        allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
 
     <div class="section category">
@@ -188,6 +218,18 @@
     <div><strong>Adres:</strong> Harbiye Mahallesi İzmir-Hatay Kardeşlik Çarşısı No:105</div>
     <div style="margin-top:1rem;">© 2025 Manuroğlu Kardeşler Tüp Bayi</div>
   </footer>
+
+  <!-- Canlı Saat -->
+  <div id="clock"></div>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString('tr-TR');
+      document.getElementById('clock').textContent = time;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 
 </body>
 </html>
